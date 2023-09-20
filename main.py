@@ -42,8 +42,8 @@ def start_training(char_name: str, char_class: str) -> str:
         print(f'{char_name}, ты Лекарь — чародей, способный исцелять раны.')
     print('Потренируйся управлять своими навыками.')
     print('Введи одну из команд: attack — чтобы атаковать противника,\
-           defence — чтобы блокировать атаку противника или\
-           special — чтобы использовать свою суперсилу.')
+defence — чтобы блокировать атаку противника или\
+special — чтобы использовать свою суперсилу.')
     print('Если не хочешь тренироваться, введи команду skip.')
     cmd: str = ''
     while cmd != 'skip':
@@ -62,9 +62,9 @@ def choice_char_class() -> str:
     char_class: str = ''
     while approve_choice != 'y':
         char_class = input('Введи название персонажа, \
-                           за которого хочешь играть: Воитель — warrior,\
-                            Маг — mage, \
-                           Лекарь — healer: ')
+за которого хочешь играть: Воитель — warrior,\
+Маг — mage, \
+qЛекарь — healer: ')
         if char_class == 'warrior':
             print('Воитель — дерзкий воин ближнего боя.\
                    Сильный, выносливый и отважный.')
@@ -80,7 +80,8 @@ def choice_char_class() -> str:
     return char_class
 
 
-def main() -> None:
+
+if __name__ == '__main__':
     run_screensaver()
     print('Приветствую тебя, искатель приключений!')
     print('Прежде чем начать игру...')
@@ -93,4 +94,4 @@ def main() -> None:
     print(start_training(char_name, char_class))
 
 
-main()
+
